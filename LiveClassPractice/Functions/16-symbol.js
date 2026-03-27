@@ -36,9 +36,25 @@ const RTIQuery = {
         }
     }
 
+
+
    }
 }
 
 for(const query of RTIQuery){
     console.log(`Filing RTI : ${query}`)
 } 
+
+
+
+govtScheme = {
+    name:"PM kisan Yojna",
+    people:54,
+    [Symbol.toPrimitive](hint){
+        if(hint === "string") return this.name;
+        if(hint === "number") return 88;
+         
+    }
+}
+console.log(+govtScheme)
+console.log(`${govtScheme}`)
