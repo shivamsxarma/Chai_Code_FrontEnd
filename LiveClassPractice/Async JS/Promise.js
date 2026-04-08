@@ -53,8 +53,16 @@ const hPromise = new Promise((res , rej) => {
 })
 
 async function nice() {
+    try{
     const result = await hPromise;
     console.log(result) 
+}catch(error){
+    console.log("error aa gaya")
 }
+    }
+
 
 nice();
+
+// const newresult = await hPromise;
+// console.log(newresult)
