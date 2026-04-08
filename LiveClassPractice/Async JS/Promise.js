@@ -1,23 +1,60 @@
-// pending , done (fulfill , resolve), nope (not , reject , nhii)
+// // pending , done (fulfill , resolve), nope (not , reject , nhii)
 
-const promise = new Promise((res) => {
-    setTimeout(()=>{
-         res("chaicode")
-    },2000)
+// const promise = new Promise((res , rej) => {
+//     setTimeout(()=>{
+// rej(new Error("chaicode"))
+//         //  res("chaicode");
+
+//     },2000)
    
-})
-console.log(promise)
-// setTimeout(()=>{
-//     console.log(promise)
-// },3000);
-
-// const myFunction = value =>{
-//     console.log(value)
-// }
-
-// promise.then((value) =>{
-//     console.log(value)
 // })
+// console.log(promise)
+// // setTimeout(()=>{
+// //     console.log(promise)
+// // },3000);
 
-promise.then(
-    (data) => console.log(data)).catch((error) => console.log(error))
+// // const myFunction = value =>{
+// //     console.log(value)
+// // }
+
+// // promise.then((value) =>{
+// //     console.log(value)
+// // })
+
+// promise
+// .then((data) => {
+//      newData = data.toUpperCase();
+//      return newData;
+// })
+// .then((data) =>{
+//     return data + ".com";
+// })
+// .then(console.log)
+// .catch((error) => console.log(error))
+   
+    
+    
+//     // .catch((error) => console.log(error))
+
+
+const fast  = Promise.resolve("fast");
+console.log(fast)
+
+const allPromise = Promise.allSettled([
+    Promise.resolve("chai"),
+    Promise.resolve("code"),
+    Promise.reject("Error"),
+])
+
+const hPromise = new Promise((res , rej) => {
+    setTimeout(() => {
+        res("masterji");
+    } , 3000)
+})
+
+async function nice() {
+    const result = await hPromise;
+    console.log(result) 
+}
+
+nice();
