@@ -64,5 +64,31 @@ async function nice() {
 
 nice();
 
+// const fast  = Promise.resolve("fast");
+// console.log(fast)
+
+// const allPromise = Promise.allSettled([
+//     Promise.resolve("chai"),
+//     Promise.resolve("code"),
+//     Promise.reject("Error"),
+// ])
+
+// const hPromise = new Promise((res , rej) => {
+//     setTimeout(() => {
+//         res("masterji");
+//     } , 3000)
+// })
+
+// async function nice() {
+//     try{
+//     const result = await hPromise;
+//     console.log(result) 
+// }catch(error){
+//     console.log("error aa gaya")
+// }
+//     }
+
+
+// nice();
 // const newresult = await hPromise;
 // console.log(newresult)
